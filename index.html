@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Y&Z Studio - Digital Solution</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #00b2ff;
+      --secondary: #0077b6;
+      --glassy-bg: rgba(255, 255, 255, 0.05);
+      --footer-dark: #0e0e0e;
+      --body-wallpaper: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--body-wallpaper) no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(145deg, var(--primary), var(--secondary));
+      padding: 2rem;
+      border-bottom: 2px solid #ffffff22;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 0 0 10px #00ffffaa;
+    }
+    .welcome-banner {
+      text-align: center;
+      margin: 2rem 1rem;
+      padding: 1.5rem;
+      background: var(--glassy-bg);
+      border-radius: 1.5rem;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .welcome-banner h2 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+    .welcome-banner p {
+      font-size: 1rem;
+      color: #eee;
+    }
+    .btn-cta {
+      margin-top: 1rem;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .btn-cta:hover {
+      background: var(--secondary);
+    }
+    section {
+      padding: 3rem 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Y&Z Studio - Solusi Digital Terbaik</h1>
+  </header>
+
+  <section class="welcome-banner">
+    <h2>Selamat Datang di Y&Z Studio!</h2>
+    <p>Solusi kreatif dan digital terbaik untuk bisnis, UMKM, pelajar, hingga perusahaan.</p>
+    <button class="btn-cta" onclick="document.getElementById('section-harga').scrollIntoView({behavior:'smooth'});">
+      Mulai Sekarang
+    </button>
+  </section>
