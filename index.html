@@ -89,3 +89,72 @@
       Mulai Sekarang
     </button>
   </section>
+<!-- Section Harga -->
+  <section id="section-harga">
+    <h2 style="text-align:center; margin-bottom: 2rem;">Pilih Paket Sesuai Kebutuhan Anda</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1.5rem; backdrop-filter: blur(6px); box-shadow: 0 0 12px #00b2ff66;">
+        <h3>Basic</h3>
+        <p>Landing page sederhana & responsive.</p>
+        <p><strong>Rp 350.000</strong></p>
+        <p><em>Waktu: min. 3 hari kerja</em></p>
+      </div>
+      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1.5rem; backdrop-filter: blur(6px); box-shadow: 0 0 12px #00b2ff66;">
+        <h3>Pro</h3>
+        <p>Landing page lengkap & interaktif.</p>
+        <p><strong>Rp 600.000</strong></p>
+        <p><em>Waktu: min. 3 hari kerja</em></p>
+      </div>
+      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1.5rem; backdrop-filter: blur(6px); box-shadow: 0 0 12px #00b2ff66;">
+        <h3>Premium</h3>
+        <p>Website visual dinamis & 3D efek.</p>
+        <p><strong>Rp 950.000</strong></p>
+        <p><em>Up to 3 hari kerja</em></p>
+      </div>
+      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1.5rem; backdrop-filter: blur(6px); box-shadow: 0 0 12px #00b2ff66;">
+        <h3>Custom</h3>
+        <p>Solusi sesuai kebutuhan dan ide Anda.</p>
+        <p><strong>Mulai dari Rp 1.000.000</strong></p>
+        <p><em>Durasi fleksibel</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Testimoni (Autoplay) -->
+  <section id="testimoni">
+    <h2 style="text-align:center; margin-bottom: 2rem;">Apa Kata Klien Kami</h2>
+    <div class="slider" style="overflow: hidden; position: relative;">
+      <div class="slides" style="display: flex; width: 400%; animation: slide 16s infinite;">
+        <div style="flex: 1; padding: 1.5rem;">"Layanan cepat, desain modern, sesuai harapan!" - <strong>Dewi, UMKM</strong></div>
+        <div style="flex: 1; padding: 1.5rem;">"Harga bersahabat & sangat komunikatif, recommended!" - <strong>Rama, Freelance</strong></div>
+        <div style="flex: 1; padding: 1.5rem;">"Visual dan fungsinya melebihi ekspektasi kami." - <strong>Yuni, Perusahaan</strong></div>
+        <div style="flex: 1; padding: 1.5rem;">"Sangat puas dengan fitur interaktif yang diberikan!" - <strong>Bayu, Startup</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Artikel (Autoplay) -->
+  <section id="artikel">
+    <h2 style="text-align:center; margin-bottom: 2rem;">Artikel & Tips Digital</h2>
+    <div class="slider" style="overflow: hidden; position: relative;">
+      <div class="slides" style="display: flex; width: 400%; animation: slide 20s infinite;">
+        <div style="flex: 1; padding: 1.5rem;">Kenapa UMKM butuh landing page di era digital?</div>
+        <div style="flex: 1; padding: 1.5rem;">Cara membuat brand terlihat profesional dengan biaya terjangkau</div>
+        <div style="flex: 1; padding: 1.5rem;">Tips memilih warna dan font yang menarik untuk website</div>
+        <div style="flex: 1; padding: 1.5rem;">Manfaat website interaktif untuk meningkatkan closing</div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes slide {
+      0%, 20% { transform: translateX(0%); }
+      25%, 45% { transform: translateX(-100%); }
+      50%, 70% { transform: translateX(-200%); }
+      75%, 95% { transform: translateX(-300%); }
+      100% { transform: translateX(0%); }
+    }
+    .slider .slides {
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
