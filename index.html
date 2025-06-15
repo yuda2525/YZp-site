@@ -368,3 +368,116 @@
     <h2>Detail Portofolio</h2>
     <p>Landing Page Event Organizer dengan CTA aktif, animasi masuk, slider dan form. Warna dominan biru neon + efek glassy, support autoplay.</p>
   </section>
+<!-- Section Testimoni (Autoplay Slider) -->
+  <section id="testimoni" style="padding: 2rem;">
+    <h2 style="text-align:center;">Apa Kata Klien Kami?</h2>
+    <div class="slider" id="testimonialSlider">
+      <div class="slide active">
+        <blockquote>"Y&Z Studio sangat komunikatif. Hasil landing page-nya bikin bisnis saya naik kelas!"</blockquote>
+        <p>- Rani, EO Jakarta</p>
+      </div>
+      <div class="slide">
+        <blockquote>"Proses cepat, desain modern, dan bisa diakses dari HP. Recommended banget!"</blockquote>
+        <p>- Fajar, Owner Kuliner Bandung</p>
+      </div>
+      <div class="slide">
+        <blockquote>"Saya suka tampilan dinamisnya, apalagi ada admin panel buat edit langsung!"</blockquote>
+        <p>- Hilda, Freelance Produk Digital</p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .slider {
+      position: relative;
+      max-width: 700px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+      padding: 1rem;
+      background: var(--glassy-bg);
+      border-radius: 1rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .slide.active {
+      display: block;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+
+  <script>
+    let currentTesti = 0;
+    const testiSlides = document.querySelectorAll('#testimonialSlider .slide');
+    setInterval(() => {
+      testiSlides[currentTesti].classList.remove('active');
+      currentTesti = (currentTesti + 1) % testiSlides.length;
+      testiSlides[currentTesti].classList.add('active');
+    }, 4000);
+  </script>
+
+  <!-- Section Artikel Otomatis -->
+  <section id="artikel" style="padding: 2rem;">
+    <h2 style="text-align:center;">Artikel Terbaru</h2>
+    <div class="slider" id="articleSlider">
+      <div class="slide active">
+        <h3>5 Tips Membuat Landing Page Efektif</h3>
+        <p>Gunakan warna yang sesuai brand, CTA jelas, dan visual yang engaging.</p>
+      </div>
+      <div class="slide">
+        <h3>Kenapa Bisnismu Butuh Landing Page?</h3>
+        <p>Landing page membuat pelanggan lebih fokus dan meningkatkan konversi.</p>
+      </div>
+      <div class="slide">
+        <h3>Desain Mobile Friendly: Harus!</h3>
+        <p>80% pengguna internet mengakses lewat HP. Jangan abaikan tampilan mobile.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    let currentArt = 0;
+    const articleSlides = document.querySelectorAll('#articleSlider .slide');
+    setInterval(() => {
+      articleSlides[currentArt].classList.remove('active');
+      currentArt = (currentArt + 1) % articleSlides.length;
+      articleSlides[currentArt].classList.add('active');
+    }, 5000);
+  </script>
+
+  <!-- Avatar Owner -->
+  <section id="owner" style="text-align: center; padding: 2rem;">
+    <img src="https://avatars.githubusercontent.com/u/171159163?v=4" alt="Yuda Nugroho Widyanto" width="120" style="border-radius: 50%; border: 3px solid #00c6ff;">
+    <h3>Yuda Nugroho Widyanto</h3>
+    <p>Founder & Developer di Y&Z Studio</p>
+  </section>
+
+  <!-- Efek 3D Smooth -->
+  <style>
+    h2, h3, p, blockquote {
+      transition: all 0.3s ease-in-out;
+    }
+
+    section:hover h2, section:hover h3 {
+      transform: scale(1.02);
+      color: #00c6ff;
+    }
+
+    section {
+      transition: all 0.4s ease-in-out;
+    }
+
+    section:hover {
+      box-shadow: 0 0 30px rgba(0, 198, 255, 0.2);
+      transform: translateY(-3px);
+    }
+  </style>
