@@ -255,3 +255,116 @@
       });
     });
   </script>
+<!-- Section Hubungi Kami -->
+  <section id="cta" style="text-align: center; padding: 2rem 1rem;">
+    <h2>Ingin Mulai Proyek?</h2>
+    <p>Kami siap membantu Anda memiliki landing page profesional sesuai kebutuhan dan budget.</p>
+    <a href="https://wa.me/6285720906090" target="_blank" class="cta-btn">Chat Sekarang</a>
+  </section>
+
+  <style>
+    .cta-btn {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      display: inline-block;
+      border-radius: 50px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+    }
+  </style>
+
+  <!-- Section Pembayaran -->
+  <section id="pembayaran" style="padding: 2rem 1rem; background: rgba(255,255,255,0.05); border-radius: 1rem; margin: 2rem;">
+    <h2 style="text-align: center;">Media Pembayaran</h2>
+    <div style="text-align: center;">
+      <p>Dana: <strong>0857-2090-6090</strong> (Yuda)</p>
+      <p>Bank / Paylater / Visa: <em>Hubungi Kami</em></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #0a0a0a; padding: 2rem; text-align: center; color: #ccc;">
+    <p>&copy; 2025 Y&Z Studio. All Rights Reserved.</p>
+    <p><a href="#admin" style="color: #00c6ff;">Login Admin</a></p>
+  </footer>
+
+  <!-- Floating Button WA + Gmail -->
+  <div style="position: fixed; right: 1rem; top: 50%; transform: translateY(-50%); z-index: 999;">
+    <a href="https://wa.me/6285720906090" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" width="48" style="margin-bottom: 1rem;" />
+    </a>
+    <a href="mailto:yudabastard84@gmail.com">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.svg" alt="Gmail" width="48" />
+    </a>
+  </div>
+
+  <!-- Toggle Share -->
+  <div id="shareToggle" style="position: fixed; bottom: 1rem; right: 1rem; z-index: 999;">
+    <button onclick="toggleShare()" style="padding: 0.7rem 1.2rem; border: none; border-radius: 50px; background: #00c6ff; color: white; font-weight: bold;">Share</button>
+    <div id="shareLinks" style="display: none; margin-top: 0.5rem;">
+      <a href="https://wa.me/?text=https://yuda2525.github.io/YZ09-site/" target="_blank">WhatsApp</a> |
+      <a href="mailto:?subject=Landing%20Page&body=https://yuda2525.github.io/YZ09-site/" target="_blank">Email</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleShare() {
+      const share = document.getElementById("shareLinks");
+      share.style.display = share.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+  <!-- Live Wallpaper -->
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #090e1b, #0e2235);
+      background-attachment: fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    :root {
+      --glassy-bg: rgba(255, 255, 255, 0.06);
+    }
+  </style>
+
+  <!-- Admin Panel Injection -->
+  <div id="admin" style="display:none;">
+    <h2>Admin Login</h2>
+    <form onsubmit="return loginAdmin()" style="text-align: center;">
+      <input type="password" id="adminPass" placeholder="Password" style="padding:0.5rem; margin:0.5rem;">
+      <button type="submit">Login</button>
+    </form>
+    <div id="adminPanel" style="display:none; padding:1rem;">
+      <h3>Edit Konten</h3>
+      <textarea id="editArea" style="width:100%; height:200px;"></textarea>
+      <button onclick="saveContent()">Simpan</button>
+    </div>
+  </div>
+
+  <script>
+    function loginAdmin() {
+      const pass = document.getElementById("adminPass").value;
+      if (pass === "admin123") {
+        document.getElementById("adminPanel").style.display = "block";
+        alert("Login berhasil");
+      } else {
+        alert("Password salah");
+      }
+      return false;
+    }
+
+    function saveContent() {
+      localStorage.setItem("customContent", document.getElementById("editArea").value);
+      alert("Konten disimpan.");
+    }
+  </script>
+
+  <!-- Portfolio Detail Injection (User View Only) -->
+  <section id="portfolio-detail" style="padding:2rem; background: rgba(255,255,255,0.04); margin-top:2rem; border-radius: 1rem;">
+    <h2>Detail Portofolio</h2>
+    <p>Landing Page Event Organizer dengan CTA aktif, animasi masuk, slider dan form. Warna dominan biru neon + efek glassy, support autoplay.</p>
+  </section>
