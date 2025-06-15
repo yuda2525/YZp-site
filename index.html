@@ -158,3 +158,100 @@
       transition: transform 0.5s ease-in-out;
     }
   </style>
+<!-- Section Portofolio -->
+  <section id="portofolio">
+    <h2 style="text-align:center; margin-bottom: 2rem;">Portofolio Kami</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+        <h3>Landing Page Bisnis Lokal</h3>
+        <p>Desain simple, warna cerah, CTA efektif.</p>
+      </div>
+      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+        <h3>Website Produk Digital</h3>
+        <p>3D dynamic, glassmorph, showcase produk & FAQ.</p>
+      </div>
+      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+        <h3>Landing Page Event</h3>
+        <p>Autoplay slider, RSVP form, dan info lengkap acara.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section FAQ -->
+  <section id="faq">
+    <h2 style="text-align:center; margin-bottom: 1.5rem;">Pertanyaan Umum</h2>
+    <div style="max-width: 800px; margin: auto;">
+      <div class="accordion">
+        <button class="accordion-btn">Apakah bisa revisi?</button>
+        <div class="accordion-content">
+          <p>Revisi minor 1x diberikan secara gratis untuk semua paket (kecuali custom sesuai kesepakatan).</p>
+        </div>
+        <button class="accordion-btn">Apakah harus bayar full di awal?</button>
+        <div class="accordion-content">
+          <p>Tidak. Pembayaran sistem 50:50 (DP dan pelunasan saat selesai).</p>
+        </div>
+        <button class="accordion-btn">Apakah website bisa saya edit sendiri?</button>
+        <div class="accordion-content">
+          <p>Ya, melalui panel admin yang kami sediakan, konten dapat diubah langsung.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Rekrutmen -->
+  <section id="rekrutmen">
+    <h2 style="text-align:center; margin-bottom: 1.5rem;">Bergabung Bersama Kami</h2>
+    <div style="max-width: 800px; margin: auto;">
+      <div class="accordion">
+        <button class="accordion-btn">Posisi Freelance UI/UX</button>
+        <div class="accordion-content">
+          <p>Terbuka untuk freelance dengan pengalaman UI minimal 6 bulan. Kirimkan portofolio dan biodata via kontak kami.</p>
+        </div>
+        <button class="accordion-btn">Posisi Admin Sosial Media</button>
+        <div class="accordion-content">
+          <p>Kami mencari admin untuk mengelola media sosial dan promosi landing page. Cocok untuk mahasiswa dan freelancer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .accordion-btn {
+      background: var(--glassy-bg);
+      color: white;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      border-radius: 1rem;
+      backdrop-filter: blur(4px);
+      transition: background 0.3s;
+    }
+    .accordion-btn:hover {
+      background: rgba(0, 178, 255, 0.3);
+    }
+    .accordion-content {
+      padding: 1rem;
+      display: none;
+      background: rgba(255,255,255,0.05);
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .accordion-btn.active + .accordion-content {
+      display: block;
+    }
+  </style>
+
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const content = btn.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
