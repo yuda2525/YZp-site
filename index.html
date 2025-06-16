@@ -3,619 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Y&Z Studio - Digital Solution</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <title>Y&Z Studio - Combined View</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root {
-      --primary: #00b2ff;
-      --secondary: #0077b6;
-      --glassy-bg: rgba(255, 255, 255, 0.05);
-      --footer-dark: #0e0e0e;
-      --body-wallpaper: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    html, body {
+    body {
       font-family: 'Poppins', sans-serif;
-      background: var(--body-wallpaper) no-repeat center center fixed;
+      background: #0a0a0f url('https://yuda2525.github.io/YZ01-site/yz21_wallpaper_final.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: white;
-      scroll-behavior: smooth;
     }
-    header {
-      background: linear-gradient(145deg, var(--primary), var(--secondary));
-      padding: 2rem;
-      border-bottom: 2px solid #ffffff22;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
     }
-    header h1 {
-      font-size: 2.5rem;
-      color: white;
-      text-shadow: 0 0 10px #00ffffaa;
-    }
-    .welcome-banner {
-      text-align: center;
-      margin: 2rem 1rem;
-      padding: 1.5rem;
-      background: var(--glassy-bg);
-      border-radius: 1.5rem;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-    }
-    .welcome-banner h2 {
-      font-size: 1.75rem;
-      margin-bottom: 0.5rem;
-    }
-    .welcome-banner p {
-      font-size: 1rem;
-      color: #eee;
-    }
-    .btn-cta {
-      margin-top: 1rem;
-      background: var(--primary);
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 1rem;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
-    .btn-cta:hover {
-      background: var(--secondary);
-    }
-    section {
-      padding: 3rem 1rem;
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
-<body>
+<body class="text-white">
 
-  <header>
-    <h1>Y&Z Studio - Solusi Digital Terbaik</h1>
+  <!-- HEADER -->
+  <header class="text-center py-8">
+    <div class="text-2xl font-bold">Y&Z Studio</div>
+    <div class="text-sm text-white/80">Solusi Digital Terbaik</div>
   </header>
 
-  <section class="welcome-banner">
-    <h2>Selamat Datang di Y&Z Studio!</h2>
-    <p>Solusi kreatif dan digital terbaik untuk bisnis, UMKM, pelajar, hingga perusahaan.</p>
-    <button class="btn-cta" onclick="document.getElementById('section-harga').scrollIntoView({behavior:'smooth'});">
-      Mulai Sekarang
-    </button>
+  <!-- ARTIKEL - Tips Digital -->
+  <section class="glass rounded-2xl mx-auto my-8 p-6 w-11/12 max-w-2xl">
+    <div class="section-title">Tips Digital Hari Ini</div>
+    <div id="tipText" class="text-white/90 text-lg font-medium">Optimalkan bisnis kamu dengan landing page yang cepat dan menarik!</div>
   </section>
-<!-- Section Harga -->
-  <section id="section-harga">
-    <h2 style="text-align:center; margin-bottom: 2rem;">Pilih Paket Sesuai Kebutuhan Anda</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1.5rem; backdrop-filter: blur(6px); box-shadow: 0 0 12px #00b2ff66;">
-        <h3>Basic</h3>
-        <p>Landing page sederhana & responsive.</p>
-        <p><strong>Rp 350.000</strong></p>
-        <p><em>Waktu: min. 3 hari kerja</em></p>
-      </div>
-      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1.5rem; backdrop-filter: blur(6px); box-shadow: 0 0 12px #00b2ff66;">
-        <h3>Pro</h3>
-        <p>Landing page lengkap & interaktif.</p>
-        <p><strong>Rp 600.000</strong></p>
-        <p><em>Waktu: min. 3 hari kerja</em></p>
-      </div>
-      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1.5rem; backdrop-filter: blur(6px); box-shadow: 0 0 12px #00b2ff66;">
-        <h3>Premium</h3>
-        <p>Website visual dinamis & 3D efek.</p>
-        <p><strong>Rp 950.000</strong></p>
-        <p><em>Up to 3 hari kerja</em></p>
-      </div>
-      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1.5rem; backdrop-filter: blur(6px); box-shadow: 0 0 12px #00b2ff66;">
-        <h3>Custom</h3>
-        <p>Solusi sesuai kebutuhan dan ide Anda.</p>
-        <p><strong>Mulai dari Rp 1.000.000</strong></p>
-        <p><em>Durasi fleksibel</em></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Testimoni (Autoplay) -->
-  <section id="testimoni">
-    <h2 style="text-align:center; margin-bottom: 2rem;">Apa Kata Klien Kami</h2>
-    <div class="slider" style="overflow: hidden; position: relative;">
-      <div class="slides" style="display: flex; width: 400%; animation: slide 16s infinite;">
-        <div style="flex: 1; padding: 1.5rem;">"Layanan cepat, desain modern, sesuai harapan!" - <strong>Dewi, UMKM</strong></div>
-        <div style="flex: 1; padding: 1.5rem;">"Harga bersahabat & sangat komunikatif, recommended!" - <strong>Rama, Freelance</strong></div>
-        <div style="flex: 1; padding: 1.5rem;">"Visual dan fungsinya melebihi ekspektasi kami." - <strong>Yuni, Perusahaan</strong></div>
-        <div style="flex: 1; padding: 1.5rem;">"Sangat puas dengan fitur interaktif yang diberikan!" - <strong>Bayu, Startup</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Artikel (Autoplay) -->
-  <section id="artikel">
-    <h2 style="text-align:center; margin-bottom: 2rem;">Artikel & Tips Digital</h2>
-    <div class="slider" style="overflow: hidden; position: relative;">
-      <div class="slides" style="display: flex; width: 400%; animation: slide 20s infinite;">
-        <div style="flex: 1; padding: 1.5rem;">Kenapa UMKM butuh landing page di era digital?</div>
-        <div style="flex: 1; padding: 1.5rem;">Cara membuat brand terlihat profesional dengan biaya terjangkau</div>
-        <div style="flex: 1; padding: 1.5rem;">Tips memilih warna dan font yang menarik untuk website</div>
-        <div style="flex: 1; padding: 1.5rem;">Manfaat website interaktif untuk meningkatkan closing</div>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    @keyframes slide {
-      0%, 20% { transform: translateX(0%); }
-      25%, 45% { transform: translateX(-100%); }
-      50%, 70% { transform: translateX(-200%); }
-      75%, 95% { transform: translateX(-300%); }
-      100% { transform: translateX(0%); }
-    }
-    .slider .slides {
-      transition: transform 0.5s ease-in-out;
-    }
-  </style>
-<!-- Section Portofolio -->
-  <section id="portofolio">
-    <h2 style="text-align:center; margin-bottom: 2rem;">Portofolio Kami</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
-        <h3>Landing Page Bisnis Lokal</h3>
-        <p>Desain simple, warna cerah, CTA efektif.</p>
-      </div>
-      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
-        <h3>Website Produk Digital</h3>
-        <p>3D dynamic, glassmorph, showcase produk & FAQ.</p>
-      </div>
-      <div style="background: var(--glassy-bg); border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
-        <h3>Landing Page Event</h3>
-        <p>Autoplay slider, RSVP form, dan info lengkap acara.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section FAQ -->
-  <section id="faq">
-    <h2 style="text-align:center; margin-bottom: 1.5rem;">Pertanyaan Umum</h2>
-    <div style="max-width: 800px; margin: auto;">
-      <div class="accordion">
-        <button class="accordion-btn">Apakah bisa revisi?</button>
-        <div class="accordion-content">
-          <p>Revisi minor 1x diberikan secara gratis untuk semua paket (kecuali custom sesuai kesepakatan).</p>
-        </div>
-        <button class="accordion-btn">Apakah harus bayar full di awal?</button>
-        <div class="accordion-content">
-          <p>Tidak. Pembayaran sistem 50:50 (DP dan pelunasan saat selesai).</p>
-        </div>
-        <button class="accordion-btn">Apakah website bisa saya edit sendiri?</button>
-        <div class="accordion-content">
-          <p>Ya, melalui panel admin yang kami sediakan, konten dapat diubah langsung.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Rekrutmen -->
-  <section id="rekrutmen">
-    <h2 style="text-align:center; margin-bottom: 1.5rem;">Bergabung Bersama Kami</h2>
-    <div style="max-width: 800px; margin: auto;">
-      <div class="accordion">
-        <button class="accordion-btn">Posisi Freelance UI/UX</button>
-        <div class="accordion-content">
-          <p>Terbuka untuk freelance dengan pengalaman UI minimal 6 bulan. Kirimkan portofolio dan biodata via kontak kami.</p>
-        </div>
-        <button class="accordion-btn">Posisi Admin Sosial Media</button>
-        <div class="accordion-content">
-          <p>Kami mencari admin untuk mengelola media sosial dan promosi landing page. Cocok untuk mahasiswa dan freelancer.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    .accordion-btn {
-      background: var(--glassy-bg);
-      color: white;
-      cursor: pointer;
-      padding: 1rem;
-      width: 100%;
-      border: none;
-      outline: none;
-      text-align: left;
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      border-radius: 1rem;
-      backdrop-filter: blur(4px);
-      transition: background 0.3s;
-    }
-    .accordion-btn:hover {
-      background: rgba(0, 178, 255, 0.3);
-    }
-    .accordion-content {
-      padding: 1rem;
-      display: none;
-      background: rgba(255,255,255,0.05);
-      border-radius: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .accordion-btn.active + .accordion-content {
-      display: block;
-    }
-  </style>
-
   <script>
-    document.querySelectorAll('.accordion-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.classList.toggle('active');
-        const content = btn.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-  </script>
-<!-- Section Hubungi Kami -->
-  <section id="cta" style="text-align: center; padding: 2rem 1rem;">
-    <h2>Ingin Mulai Proyek?</h2>
-    <p>Kami siap membantu Anda memiliki landing page profesional sesuai kebutuhan dan budget.</p>
-    <a href="https://wa.me/6285720906090" target="_blank" class="cta-btn">Chat Sekarang</a>
-  </section>
-
-  <style>
-    .cta-btn {
-      background: linear-gradient(to right, #00c6ff, #0072ff);
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      margin-top: 1rem;
-      display: inline-block;
-      border-radius: 50px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-      text-decoration: none;
-    }
-  </style>
-
-  <!-- Section Pembayaran -->
-  <section id="pembayaran" style="padding: 2rem 1rem; background: rgba(255,255,255,0.05); border-radius: 1rem; margin: 2rem;">
-    <h2 style="text-align: center;">Media Pembayaran</h2>
-    <div style="text-align: center;">
-      <p>Dana: <strong>0857-2090-6090</strong> (Yuda)</p>
-      <p>Bank / Paylater / Visa: <em>Hubungi Kami</em></p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer style="background: #0a0a0a; padding: 2rem; text-align: center; color: #ccc;">
-    <p>&copy; 2025 Y&Z Studio. All Rights Reserved.</p>
-    <p><a href="#admin" style="color: #00c6ff;">Login Admin</a></p>
-  </footer>
-
-  <!-- Floating Button WA + Gmail -->
-  <div style="position: fixed; right: 1rem; top: 50%; transform: translateY(-50%); z-index: 999;">
-    <a href="https://wa.me/6285720906090" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" width="48" style="margin-bottom: 1rem;" />
-    </a>
-    <a href="mailto:yudabastard84@gmail.com">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.svg" alt="Gmail" width="48" />
-    </a>
-  </div>
-
-  <!-- Toggle Share -->
-  <div id="shareToggle" style="position: fixed; bottom: 1rem; right: 1rem; z-index: 999;">
-    <button onclick="toggleShare()" style="padding: 0.7rem 1.2rem; border: none; border-radius: 50px; background: #00c6ff; color: white; font-weight: bold;">Share</button>
-    <div id="shareLinks" style="display: none; margin-top: 0.5rem;">
-      <a href="https://wa.me/?text=https://yuda2525.github.io/YZ09-site/" target="_blank">WhatsApp</a> |
-      <a href="mailto:?subject=Landing%20Page&body=https://yuda2525.github.io/YZ09-site/" target="_blank">Email</a>
-    </div>
-  </div>
-
-  <script>
-    function toggleShare() {
-      const share = document.getElementById("shareLinks");
-      share.style.display = share.style.display === "block" ? "none" : "block";
-    }
-  </script>
-
-  <!-- Live Wallpaper -->
-  <style>
-    body {
-      background: linear-gradient(to bottom right, #090e1b, #0e2235);
-      background-attachment: fixed;
-      background-size: cover;
-      color: #fff;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    :root {
-      --glassy-bg: rgba(255, 255, 255, 0.06);
-    }
-  </style>
-
-  <!-- Admin Panel Injection -->
-  <div id="admin" style="display:none;">
-    <h2>Admin Login</h2>
-    <form onsubmit="return loginAdmin()" style="text-align: center;">
-      <input type="password" id="adminPass" placeholder="Password" style="padding:0.5rem; margin:0.5rem;">
-      <button type="submit">Login</button>
-    </form>
-    <div id="adminPanel" style="display:none; padding:1rem;">
-      <h3>Edit Konten</h3>
-      <textarea id="editArea" style="width:100%; height:200px;"></textarea>
-      <button onclick="saveContent()">Simpan</button>
-    </div>
-  </div>
-
-  <script>
-    function loginAdmin() {
-      const pass = document.getElementById("adminPass").value;
-      if (pass === "admin123") {
-        document.getElementById("adminPanel").style.display = "block";
-        alert("Login berhasil");
-      } else {
-        alert("Password salah");
-      }
-      return false;
-    }
-
-    function saveContent() {
-      localStorage.setItem("customContent", document.getElementById("editArea").value);
-      alert("Konten disimpan.");
-    }
-  </script>
-
-  <!-- Portfolio Detail Injection (User View Only) -->
-  <section id="portfolio-detail" style="padding:2rem; background: rgba(255,255,255,0.04); margin-top:2rem; border-radius: 1rem;">
-    <h2>Detail Portofolio</h2>
-    <p>Landing Page Event Organizer dengan CTA aktif, animasi masuk, slider dan form. Warna dominan biru neon + efek glassy, support autoplay.</p>
-  </section>
-<!-- Section Testimoni (Autoplay Slider) -->
-  <section id="testimoni" style="padding: 2rem;">
-    <h2 style="text-align:center;">Apa Kata Klien Kami?</h2>
-    <div class="slider" id="testimonialSlider">
-      <div class="slide active">
-        <blockquote>"Y&Z Studio sangat komunikatif. Hasil landing page-nya bikin bisnis saya naik kelas!"</blockquote>
-        <p>- Rani, EO Jakarta</p>
-      </div>
-      <div class="slide">
-        <blockquote>"Proses cepat, desain modern, dan bisa diakses dari HP. Recommended banget!"</blockquote>
-        <p>- Fajar, Owner Kuliner Bandung</p>
-      </div>
-      <div class="slide">
-        <blockquote>"Saya suka tampilan dinamisnya, apalagi ada admin panel buat edit langsung!"</blockquote>
-        <p>- Hilda, Freelance Produk Digital</p>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    .slider {
-      position: relative;
-      max-width: 700px;
-      margin: auto;
-      overflow: hidden;
-    }
-
-    .slide {
-      display: none;
-      text-align: center;
-      padding: 1rem;
-      background: var(--glassy-bg);
-      border-radius: 1rem;
-      backdrop-filter: blur(8px);
-    }
-
-    .slide.active {
-      display: block;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-  </style>
-
-  <script>
-    let currentTesti = 0;
-    const testiSlides = document.querySelectorAll('#testimonialSlider .slide');
+    const tips = [
+      "Optimalkan bisnis kamu dengan landing page yang cepat dan menarik!",
+      "Gunakan warna yang kontras untuk CTA yang efektif.",
+      "Pastikan website kamu mobile-friendly.",
+      "SEO itu penting! Gunakan keyword relevan di setiap halaman."
+    ];
+    let tipIndex = 0;
     setInterval(() => {
-      testiSlides[currentTesti].classList.remove('active');
-      currentTesti = (currentTesti + 1) % testiSlides.length;
-      testiSlides[currentTesti].classList.add('active');
-    }, 4000);
+      tipIndex = (tipIndex + 1) % tips.length;
+      document.getElementById("tipText").innerText = tips[tipIndex];
+    }, 3500);
   </script>
 
-  <!-- Section Artikel Otomatis -->
-  <section id="artikel" style="padding: 2rem;">
-    <h2 style="text-align:center;">Artikel Terbaru</h2>
-    <div class="slider" id="articleSlider">
-      <div class="slide active">
-        <h3>5 Tips Membuat Landing Page Efektif</h3>
-        <p>Gunakan warna yang sesuai brand, CTA jelas, dan visual yang engaging.</p>
-      </div>
-      <div class="slide">
-        <h3>Kenapa Bisnismu Butuh Landing Page?</h3>
-        <p>Landing page membuat pelanggan lebih fokus dan meningkatkan konversi.</p>
-      </div>
-      <div class="slide">
-        <h3>Desain Mobile Friendly: Harus!</h3>
-        <p>80% pengguna internet mengakses lewat HP. Jangan abaikan tampilan mobile.</p>
-      </div>
+  <!-- TESTIMONI -->
+  <section class="glass rounded-2xl mx-auto my-8 p-6 w-11/12 max-w-4xl">
+    <div class="section-title">Apa Kata Klien</div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4" id="testimonialBox">
+      <div class="bg-white/5 p-4 rounded-xl">Layanan sangat cepat dan hasilnya memuaskan! 🌟</div>
+      <div class="bg-white/5 p-4 rounded-xl">Design-nya keren banget, langsung suka dari awal. 👍</div>
+      <div class="bg-white/5 p-4 rounded-xl">Bisa request custom sesuai keinginan, mantap! 💯</div>
     </div>
   </section>
 
-  <script>
-    let currentArt = 0;
-    const articleSlides = document.querySelectorAll('#articleSlider .slide');
-    setInterval(() => {
-      articleSlides[currentArt].classList.remove('active');
-      currentArt = (currentArt + 1) % articleSlides.length;
-      articleSlides[currentArt].classList.add('active');
-    }, 5000);
-  </script>
-
-  <!-- Avatar Owner -->
-  <section id="owner" style="text-align: center; padding: 2rem;">
-    <img src="https://avatars.githubusercontent.com/u/171159163?v=4" alt="Yuda Nugroho Widyanto" width="120" style="border-radius: 50%; border: 3px solid #00c6ff;">
-    <h3>Yuda Nugroho Widyanto</h3>
-    <p>Founder & Developer di Y&Z Studio</p>
-  </section>
-
-  <!-- Efek 3D Smooth -->
-  <style>
-    h2, h3, p, blockquote {
-      transition: all 0.3s ease-in-out;
-    }
-
-    section:hover h2, section:hover h3 {
-      transform: scale(1.02);
-      color: #00c6ff;
-    }
-
-    section {
-      transition: all 0.4s ease-in-out;
-    }
-
-    section:hover {
-      box-shadow: 0 0 30px rgba(0, 198, 255, 0.2);
-      transform: translateY(-3px);
-    }
-  </style>
-<!-- Section FAQ (Interaktif Accordion) -->
-  <section id="faq" style="padding: 2rem;">
-    <h2 style="text-align:center;">Pertanyaan Umum (FAQ)</h2>
-    <div class="accordion">
-      <div class="accordion-item">
-        <button class="accordion-btn">Berapa lama waktu pengerjaan?</button>
-        <div class="accordion-content">Basic dan Pro: ±3 hari kerja. Premium: bisa lebih fleksibel tergantung kebutuhan.</div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-btn">Apakah bisa revisi?</button>
-        <div class="accordion-content">Bisa. Kami beri revisi minor selama proses berlangsung.</div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-btn">Pembayaran lewat apa?</button>
-        <div class="accordion-content">Dana: 085720906090 a.n. Yuda Bastard. Juga mendukung Visa, Bank Transfer, dan PayLater (by request).</div>
-      </div>
+  <!-- FAQ / Q&A -->
+  <section class="glass rounded-2xl mx-auto my-8 p-6 w-11/12 max-w-3xl">
+    <div class="section-title">Pertanyaan Umum</div>
+    <div>
+      <details class="mb-4">
+        <summary class="cursor-pointer font-semibold">Apakah bisa request desain khusus?</summary>
+        <p class="mt-2 text-white/80">Tentu! Kami menyediakan paket custom sesuai kebutuhanmu.</p>
+      </details>
+      <details class="mb-4">
+        <summary class="cursor-pointer font-semibold">Berapa lama proses pengerjaan?</summary>
+        <p class="mt-2 text-white/80">Mulai dari 3–7 hari kerja tergantung kompleksitas.</p>
+      </details>
+      <details>
+        <summary class="cursor-pointer font-semibold">Apakah revisi dikenakan biaya?</summary>
+        <p class="mt-2 text-white/80">Revisi tidak dikenakan biaya selama masih dalam masa validasi revisi (7 hari).</p>
+      </details>
     </div>
   </section>
 
-  <!-- Rekrutmen (Accordion Interaktif) -->
-  <section id="rekrutmen" style="padding: 2rem;">
-    <h2 style="text-align:center;">Bergabung dengan Kami</h2>
-    <div class="accordion">
-      <div class="accordion-item">
-        <button class="accordion-btn">Bidang yang dibuka?</button>
-        <div class="accordion-content">Design UI/UX, Konten Kreatif, Admin Proyek, dan Developer.</div>
-      </div>
-      <div class="accordion-item">
-        <button class="accordion-btn">Apa saja syaratnya?</button>
-        <div class="accordion-content">Minimal pengalaman 1 tahun di bidang terkait atau portofolio setara.</div>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    .accordion-item {
-      margin-bottom: 1rem;
-      border-radius: 0.8rem;
-      overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .accordion-btn {
-      background: #00c6ff;
-      color: white;
-      width: 100%;
-      padding: 1rem;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      font-weight: bold;
-    }
-
-    .accordion-content {
-      background: #f9f9f9;
-      padding: 1rem;
-      display: none;
-    }
-
-    .accordion-btn.active + .accordion-content {
-      display: block;
-    }
-  </style>
-
-  <script>
-    document.querySelectorAll('.accordion-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.classList.toggle('active');
-        let content = btn.nextElementSibling;
-        content.style.display = content.style.display === "block" ? "none" : "block";
-      });
-    });
-  </script>
-
-  <!-- Toggle Share Button -->
-  <div id="shareToggle" style="position:fixed; bottom:1rem; right:1rem; z-index:1000;">
-    <button onclick="sharePage()" style="background:#00c6ff; color:white; padding:0.8rem; border:none; border-radius:50%; box-shadow:0 0 12px rgba(0,198,255,0.5);">
-      🔗
-    </button>
-  </div>
-
-  <script>
-    function sharePage() {
-      if (navigator.share) {
-        navigator.share({
-          title: 'Y&Z Studio',
-          text: 'Cek landing page keren ini!',
-          url: window.location.href
-        });
-      } else {
-        alert('Fitur share tidak didukung di browser ini.');
-      }
-    }
-  </script>
-
-  <!-- Penutup: Efek Resolusi & Head Island -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-      image-rendering: crisp-edges;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(135deg, #050d1a, #0d1f2f);
-      color: #f0f0f0;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-
-    header {
-      background: linear-gradient(120deg, #00c6ff, #0052d4, #021b79);
-      color: white;
-      padding: 1.5rem;
-      border-bottom: 3px solid #00c6ff;
-      box-shadow: 0 0 15px rgba(0,198,255,0.4);
-    }
-
-    footer {
-      background: #080f1c;
-      padding: 2rem;
-      text-align: center;
-      color: #ccc;
-    }
-
-    @media screen and (min-width: 1440px) {
-      body {
-        max-width: 1920px;
-        margin: auto;
-      }
-    }
-  </style>
-
-  <footer>
-    <p>&copy; 2025 Y&Z Studio. All Rights Reserved.</p>
-  </footer>
 </body>
 </html>
